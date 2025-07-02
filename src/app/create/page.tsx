@@ -5,6 +5,7 @@ import { db } from "@/lib/firebase";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import { useRouter } from "next/navigation";
 import styles from "@/components/Create.module.css";
+import MapPicker from "@/components/MapPicker";
 
 const emergencyTypes = [
   "อุบัติเหตุ",
@@ -111,14 +112,26 @@ return (
         className={styles.input}
       />
 
-      <input
-        name="location"
-        placeholder="สถานที่เกิดเหตุ"
-        value={form.location}
-        onChange={handleChange}
-        required
-        className={styles.input}
+      {/* Google Map Picker */}
+      
+      <label style={{ display: "block", marginBottom: 4 }}>สถานที่เกิดเหตุ</label>
+      <MapPicker
+        onLocationSelect={(lat, lng, address) => {
+          setForm((prev) => ({
+            ...prev,
+            location: address || `${lat},${lng}`,
+          }));
+        }}
       />
+      {form.location && (
+        <p style={{ marginTop: 8, fontSize: 14 }}>
+          สถานที่ที่เลือก: {form.location}
+        </p>
+      )}
+      <label style={{ display: "block", marginTop: 16 }}>แนบรูปภาพ (ถ้ามี)</label>
+      <p style={{ fontSize: 12, color: "#666" }}>
+      </p>
+
 
       <input
         type="file"
@@ -133,14 +146,12 @@ return (
           alt="preview"
           className={styles.previewImage}
         />
-        {/* เพิ่มปุ่มลบรูป */}
         {preview && (
           <button
             type="button"
             onClick={() => {
               setFile(null);
               setPreview(null);
-              // ถ้าอยากล้าง input file ด้วยอาจใช้ ref เพิ่มเติม
             }}
             className={styles.button}
             style={{
