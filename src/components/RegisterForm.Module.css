@@ -1,0 +1,110 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #f24c72; 
+  letter-spacing: 0.2em;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #f8c1cc; 
+  border-radius: 9999px; 
+  font-size: 1rem;
+  color: #444;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.input::placeholder {
+  color: #f497aa; /* สีชมพูอ่อน */
+  font-weight: 500;
+}
+
+.input:focus {
+  border-color: #f24c72; /* สีชมพูเข้ม */
+  outline: none;
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  color: white;
+  letter-spacing: 0.1em;
+  margin-top: 1.5rem;
+  box-shadow: 0 5px 10px rgba(242, 76, 114, 0.5);
+}
+
+.primary {
+  background: linear-gradient(90deg, #f24c72 0%, #ff758c 100%);
+}
+
+.primary:hover {
+  background: linear-gradient(90deg, #ff758c 0%, #f24c72 100%);
+}
+
+.backButton {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #f24c72;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(242, 76, 114, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background: #ff758c;
+}
+
+.error {
+  color: #f24c72;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ปุ่ม Google */
+.google {
+  background: #f8c1cc; ;
+  box-shadow: 0 5px 10px rgba(244, 66, 194, 0.5);
+  margin-top: 1rem;
+  color: #f24c72;
+}
+
+.google:hover {
+  background: #d633bb;
+}
+.googleText {
+  color: #f24c72;
+  font-weight: 500;
+}

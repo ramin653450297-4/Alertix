@@ -1,0 +1,102 @@
+/* Create.module.css */
+
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  background-image: linear-gradient(135deg, #f24c72 0%, #ff758c 100%);
+  color: white;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.option {
+  color: black;
+  background-color: white;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ffadc1; /* ขอบสีชมพูอ่อน */
+  border-radius: 999px;
+  font-size: 1rem;
+  outline: none;
+  background-color: white; /* พื้นหลังขาว */
+  transition: 0.3s ease;
+  color: black; /* ตัวหนังสือสีดำ */
+}
+
+.input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 183, 194, 0.5); /* โทนชมพูอ่อนตอน focus */
+  border-color: #f24c72; /* ขอบชมพูเข้มขึ้นตอน focus */
+  background-color: white;
+}
+
+/* สำหรับ select input */
+.select {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ffadc1; /* ขอบชมพูอ่อน */
+  border-radius: 999px;
+  font-size: 1rem;
+  outline: none;
+  background-color: white;
+  color: black;
+  appearance: none; /* ลบลูกศร default (ถ้าต้องการปรับเพิ่มเติม) */
+  transition: 0.3s ease;
+}
+
+.select:focus {
+  box-shadow: 0 0 0 3px rgba(255, 183, 194, 0.5);
+  border-color: #f24c72;
+  background-color: white;
+}
+
+/* option สีตัวหนังสือดำ */
+.option {
+  color: black;
+}
+
+.button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f24c72 0%, #ff758c 100%);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #ff758c 0%, #f24c72 100%);
+}
+
+.previewContainer {
+  margin-top: 1rem;
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 1rem;
+  border: 3px solid white;
+  object-fit: cover;
+}
+.previewText {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+}
